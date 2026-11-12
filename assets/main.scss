@@ -1,0 +1,51 @@
+---
+---
+
+@import "minima";
+
+/* 1. Dark Mode Background & Voxel Font */
+body {
+  background-color: #181a1b;
+  color: #e8e6e3;
+  font-family: 'Courier New', monospace;
+}
+
+/* 2. Top Header Bar with Bloxd Grass-Green Accent */
+.site-header {
+  background-color: #111314;
+  border-top: 5px solid #4CAF50;
+  border-bottom: 2px solid #333;
+}
+
+.site-title, .site-title:visited {
+  color: #4CAF50 !important;
+  font-weight: bold;
+}
+
+/* 3. Post Titles & Links */
+.post-title, h1, h2, h3 {
+  color: #ffffff;
+}
+
+a {
+  color: #66bb6a;
+}
+
+a:hover {
+  color: #a5d6a7;
+}
+
+/* 4. Footer Styling */
+.site-footer {
+  background-color: #111314;
+  border-top: 2px solid #333;
+  color: #aaaaaa;
+}
+
+/* 5. Code Boxes for World Codes */
+pre, code {
+  background-color: #25282a;
+  border: 1px solid #4CAF50;
+  color: #81c784;
+  border-radius: 0px;
+}
