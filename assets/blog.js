@@ -1,14 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // ==========================================
-  // 1. READING TIME ESTIMATOR 
-  // ==========================================
+function initBlogFeatures() {
   const postContent = document.querySelector(".post-content");
   const postHeader = document.querySelector(".post-header");
 
   if (postContent && postHeader) {
     const text = postContent.innerText || "";
     const words = text.trim().split(/\s+/).filter(Boolean).length;
-    const minutes = Math.max(1, Math.ceil(words / 200)); // 200 words per minute
+    const minutes = Math.max(1, Math.ceil(words / 200));
 
     const badge = document.createElement("span");
     badge.innerText = ` • ⏱️ ${minutes} min read (${words} words)`;
@@ -24,9 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ==========================================
-  // 2. LIVE SEARCH BAR for searching
-  // ==========================================
   const postList = document.querySelector(".post-list");
 
   if (postList) {
@@ -35,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const searchInput = document.createElement("input");
     searchInput.type = "text";
-    searchInput.placeholder = "Search arcticles....";
+    searchInput.placeholder = "🔍 Search Bloxd.io posts, codes, or updates...";
     searchInput.style.width = "100%";
     searchInput.style.padding = "12px 16px";
     searchInput.style.backgroundColor = "#111314";
@@ -47,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.style.boxSizing = "border-box";
     searchInput.style.outline = "none";
 
-    // Empty state message when nothing matches
     const noResults = document.createElement("p");
     noResults.innerText = "No matching posts found.";
     noResults.style.display = "none";
@@ -57,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     searchWrapper.appendChild(searchInput);
     searchWrapper.appendChild(noResults);
 
-    // Insert right at the top of the homepage content (directly under the header)
     const homeContainer = document.querySelector(".home") || postList.parentElement;
     homeContainer.insertBefore(searchWrapper, homeContainer.firstChild);
 
@@ -80,4 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
       noResults.style.display = visibleCount === 0 ? "block" : "none";
     });
   }
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initBlogFeatures);
+} else {
+  initBlogFeatures();
+}
