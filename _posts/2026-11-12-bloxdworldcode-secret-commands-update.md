@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Welcome to BloxdWorldCodeBlog!"
-date: 2026-11-11
+title: "BWC incoming secret commands upd!"
+date: 2026-11-12
 ---
 
 
