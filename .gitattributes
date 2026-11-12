@@ -1,2 +1,3 @@
 _includes/*.html linguist-detectable=true linguist-language=CSS
+assets/*.js linguist-detectable=true
 
