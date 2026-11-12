@@ -1,0 +1,78 @@
+<header class="bwc-navbar">
+  <div class="bwc-nav-container">
+    <a class="bwc-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    
+    <nav class="bwc-nav-buttons">
+      <a href="{{ '/' | relative_url }}" class="bwc-btn">HOME</a>
+      <a href="https://bloxdworldcode.vercel.app" target="_blank" rel="noopener" class="bwc-btn bwc-btn-primary">BloxdWorldCode</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  /* Adds space at the top so the fixed navbar doesn't cover your page title */
+  body {
+    padding-top: 70px !important;
+  }
+
+  /* Sticky Navbar pinned to the top */
+  .bwc-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111314;
+    border-bottom: 3px solid #4CAF50;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .bwc-nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bwc-brand {
+    color: #4CAF50 !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none !important;
+  }
+
+  .bwc-nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Button Styling */
+  .bwc-btn {
+    background-color: #25282a;
+    color: #ffffff !important;
+    border: 1px solid #4CAF50;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none !important;
+    transition: background-color 0.15s, transform 0.1s;
+  }
+
+  .bwc-btn:hover {
+    background-color: #33383b;
+    transform: translateY(-1px);
+  }
+
+  /* Highlighted Green Button for BloxdWorldCode */
+  .bwc-btn-primary {
+    background-color: #4CAF50;
+    color: #111314 !important;
+  }
+
+  .bwc-btn-primary:hover {
+    background-color: #66bb6a;
+  }
+</style>
