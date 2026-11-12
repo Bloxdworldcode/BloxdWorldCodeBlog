@@ -51,3 +51,80 @@ img {
 }
 
 </style>
+<style>
+  /* Extra space at the bottom so the banner doesn't cover your footer */
+  body {
+    padding-bottom: 105px !important;
+  }
+
+  /* Bottom Banner Container */
+  #promo-banner-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111314;
+    border-top: 2px solid #4CAF50;
+    text-align: center;
+    padding: 8px 10px;
+    z-index: 9999;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+  }
+
+  /* Banner Image Styling */
+  #promo-banner-bar img {
+    max-width: 728px;
+    width: 90%;
+    max-height: 85px;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #333;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  #promo-banner-bar img:hover {
+    transform: scale(1.01);
+    border-color: #4CAF50;
+  }
+
+  /* Close 'X' Button */
+  #close-promo-ad {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    background: #25282a;
+    color: #cccccc;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px 7px;
+    cursor: pointer;
+  }
+
+  #close-promo-ad:hover {
+    background: #4CAF50;
+    color: #111314;
+    border-color: #4CAF50;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.createElement("div");
+    banner.id = "promo-banner-bar";
+    banner.innerHTML = `
+      <button id="close-promo-ad" title="Close Ad">✕</button>
+      <a href="https://bloxdworldcode.vercel.app" target="_blank" rel="noopener">
+        <img src="/BloxdWorldCodeBlog/images/favicon.png" alt="Advertisement">
+      </a>
+    `;
+    document.body.appendChild(banner);
+
+    document.getElementById("close-promo-ad").addEventListener("click", () => {
+      banner.remove();
+      document.body.style.setProperty("padding-bottom", "0px", "important");
+    });
+  });
+</script>
