@@ -31,7 +31,7 @@ Our dedicated team of **coders and builders** is working hard behind the scenes 
 * **Estimated Release Window:** December 2026 – February 2027
 
 ## 📢 Stay Updated!
-Want sneak peeks, behind-the-scenes leaks, and launch day alerts? Make sure to follow **Mint_Icecream** on **BloxdHub** so you don't miss a thing!
+Want sneak peeks, behind-the-scenes leaks, and launch day alerts? Make sure to follow **Mint_Icecream** on **BloxdHub/BloxdWorldCode** so you don't miss a thing!
 
 > This post was a requested blog post by a user on BloxdWorldCode... Weekly one fanpost is allowed...
 > BloxdWorldCode developer team
