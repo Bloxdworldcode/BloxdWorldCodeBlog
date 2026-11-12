@@ -52,13 +52,11 @@ img {
 
 </style>
 <style>
-  /* Extra space at the bottom so the banner doesn't cover your footer */
   body {
     padding-bottom: 105px !important;
   }
 
-  /* Bottom Banner Container */
-  #promo-banner-bar {
+  #bwc-footer-strip {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -72,24 +70,16 @@ img {
     box-sizing: border-box;
   }
 
-  /* Banner Image Styling */
-  #promo-banner-bar img {
+  #bwc-footer-strip img {
     max-width: 728px;
     width: 90%;
     max-height: 85px;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #333;
-    transition: transform 0.15s ease, border-color 0.15s ease;
   }
 
-  #promo-banner-bar img:hover {
-    transform: scale(1.01);
-    border-color: #4CAF50;
-  }
-
-  /* Close 'X' Button */
-  #close-promo-ad {
+  #bwc-close-strip {
     position: absolute;
     top: 6px;
     right: 12px;
@@ -103,28 +93,16 @@ img {
     cursor: pointer;
   }
 
-  #close-promo-ad:hover {
+  #bwc-close-strip:hover {
     background: #4CAF50;
     color: #111314;
-    border-color: #4CAF50;
   }
 </style>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const banner = document.createElement("div");
-    banner.id = "promo-banner-bar";
-    banner.innerHTML = `
-      <button id="close-promo-ad" title="Close Ad">✕</button>
-      <a href="https://bloxdworldcode.vercel.app" target="_blank" rel="noopener">
-        <img src="/BloxdWorldCodeBlog/images/favicon.png" alt="Advertisement">
-      </a>
-    `;
-    document.body.appendChild(banner);
+<div id="bwc-footer-strip">
+  <button id="bwc-close-strip" onclick="document.getElementById('bwc-footer-strip').remove(); document.body.style.setProperty('padding-bottom', '0px', 'important');">✕</button>
+  <a href="https://bloxdworldcode.vercel.app" target="_blank" rel="noopener">
+    <img src="{{ '/images/favicon.png' | relative_url }}" alt="BloxdWorldCode">
+  </a>
+</div>
 
-    document.getElementById("close-promo-ad").addEventListener("click", () => {
-      banner.remove();
-      document.body.style.setProperty("padding-bottom", "0px", "important");
-    });
-  });
-</script>
