@@ -1,3 +1,5 @@
 title: BloxdWorldCodeBlog
 description: Codes, tips, and update article for BloxdWorldCode!
+baseurl: "/BloxdWorldCodeBlog"
 theme: minima
+
