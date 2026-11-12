@@ -29,7 +29,7 @@ function initBlogFeatures() {
 
     const searchInput = document.createElement("input");
     searchInput.type = "text";
-    searchInput.placeholder = "🔍 Search Bloxd.io posts, codes, or updates...";
+    searchInput.placeholder = "Search articles.....";
     searchInput.style.width = "100%";
     searchInput.style.padding = "12px 16px";
     searchInput.style.backgroundColor = "#111314";
